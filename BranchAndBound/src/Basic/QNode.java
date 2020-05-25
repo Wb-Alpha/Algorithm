@@ -1,5 +1,5 @@
 package Basic;
-
+/*
 public class QNode {
 	QNode parent;//父节点
 	boolean leftChild;//左子节点
@@ -25,3 +25,4 @@ public class QNode {
 		}
 	}
 }
+*/

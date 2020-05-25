@@ -9,7 +9,7 @@ package Basic;
  * 解同一问题的优先队列式分支限界法用一极小堆来存储活结点表。其优先级是结点的当前费用。算法还是从排列
  * 树的结点B和空优先队列开始。结点B被扩展后，它的3个儿子结点C，D和E被依次插入堆中。
  */
-
+/*
 
 public class FIFOBBloding {
 	static int n;//装载数量
@@ -85,7 +85,7 @@ public class FIFOBBloding {
 			}
 		}
 }
-
+*/
 
 
 

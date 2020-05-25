@@ -7,7 +7,7 @@ public class basicTools {
 		a[j] = t;
 	}
 	
-	private static void main(Comparable[] a) {
+	private static void show(Comparable[] a) {
 		for (int i=0; i<a.length; i++) {
 			System.out.print(a[i]+" ");
 			System.out.println();
