@@ -1,0 +1,100 @@
+package LoadingProblem;
+
+import java.util.*;
+
+/*
+ * 有一批共n个集装箱要装上2艘载重量分别为C1和C2的轮船，
+ * 其中集装箱i的重量为wi，且∑wi≤C1+C2，装载问题要求确定一个合理的装载方案可将这n个集装箱装上这2艘轮船。
+ * 
+  * 容易证明，如果一个给定装载问题有解，则采用下面的策略可得到最优装载方案：
+ *(1) 首先将第一艘轮船尽可能装满；
+ *(2) 将剩余的集装箱装上第二艘轮船。
+ */
+
+public class Exp1 {
+	//类数据成员
+	static int n;//集装箱数量
+	static int[] w;//集装箱重量数组
+	static int c1;//第一艘轮船的载重量
+	static int c2;//第二艘船的载重量
+	static int cw;//当前载重量
+	static int bestw;//当前最优载重重量
+	static int r;//剩余集装箱重量
+	static int[] x;//当前解
+	static int[] bestx;//当前最优解
+	static boolean isSolve = false;//是否有解
+	
+	public static void maxLoading() {
+		//初始化类数据成员
+		cw = 0;//当前载重量
+		x = new int[n+1];
+		bestx = new int[n+1]; 
+		
+		for ( int i=0; i < n; i++) {
+			r += w[i];
+			System.out.println(r);
+		}
+		backtrack(1);//计算最优载重重量
+	}
+	
+	public static void backtrack(int i) {
+		System.out.println("r="+r+" c2="+c2);
+		//搜索第i层节点
+		if (i>=n) {//如果已经到达叶节点
+			if ( (cw > bestw ) && ( r<c2 ) ) {
+				for (int j=1; j<=n; j++) {
+					bestx[j] = x[j];
+					bestw = cw;
+					isSolve = true;
+					return;
+				}
+			}
+		}
+		
+		//搜索子树
+		r -= w[i];//剩余集装箱重量
+		if ( cw+w[i] <= c1) {
+			x[i] = 1;
+			cw += w[i];
+			backtrack(i+1);
+			cw -= w[i];
+		}
+		if ( cw+r > bestw) {
+			x[i] = 0;//搜索右子树
+			backtrack(i+1);
+		}
+		r+=w[i];
+	}
+	
+	//用于展示结果的函数
+	static void show() {
+		if ( isSolve ) {//如果问题有解
+			System.out.println("最佳的装载方案为");
+			for (int i=0; i<n; i++) {
+				System.out.print(bestx[i]);
+			}
+			System.out.println("其装载重量为"+ bestw);
+		}
+		else {
+			System.out.println("没有可行的装载方案");
+		}
+	}
+	
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("请输入集装箱数量");
+		n = in.nextInt();
+		System.out.println("请输入第一艘船的载重");
+		c1 = in.nextInt();
+		System.out.println("请输入第二艘船的载重");
+		c2 = in.nextInt();
+		System.out.println("请输入集装箱的重量");
+		w = new int[n];
+		for (int i=0; i<n; i++) {
+			w[i] = in.nextInt();
+		}
+		
+		maxLoading();
+		show();
+	}
+}
