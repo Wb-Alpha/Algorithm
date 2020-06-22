@@ -4,14 +4,8 @@ import java.util.Scanner;
 
 public class Coin {
 	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
-		int[] coins;
-		System.out.println("请输入硬币面值");
-		int N = in.nextInt();
-		coins = new int[N];
-		System.out.println("请输入总值");
-		int amount = in.nextInt();
-		in.close();
+		int[] coins = {1,2,5};
+		int amount = 11;
 		System.out.println(coinChange(coins, amount));
 	}
 

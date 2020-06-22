@@ -21,7 +21,7 @@ public class CoinWithNote {
 		    int value = (int) memo.get(key);
 		    System.out.println(key+":"+value);
 		}*/
-		System.out.println(amount);
+		//System.out.println(amount);
 		
 		if (amount == 0) return 0;
 		if (amount < 0) return -1;
@@ -29,7 +29,7 @@ public class CoinWithNote {
 		for (int coin : coins) {
 			int sub = coinChange(memo, coins, amount - coin);
 			if (sub == -1) continue;
-			res = (res < sub-1? res:sub-1);
+			res = (res < sub-1 ? res:sub-1);
 		}
 		
 		if (res != Integer.MAX_VALUE)
