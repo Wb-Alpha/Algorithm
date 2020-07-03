@@ -2,7 +2,7 @@ package QuickSort;
 
 public class Quick {
 	public static void main(String[] args) {
-		Comparable[] a = {14,36,17,452,276,36,462,723,34};
+		Comparable[] a = {8,4,3,7,1,5,6,2};
 		sort(a);
 		show(a);
 	}

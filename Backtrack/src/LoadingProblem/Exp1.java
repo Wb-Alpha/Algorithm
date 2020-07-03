@@ -24,6 +24,7 @@ public class Exp1 {
 	static int[] bestx;//当前最优解
 	static boolean isSolve = false;//是否有解
 	
+	
 	public static void maxLoading() {
 		//初始化类数据成员
 		cw = 0;//当前载重量
@@ -84,17 +85,10 @@ public class Exp1 {
 	
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		System.out.println("请输入集装箱数量");
-		n = in.nextInt();
-		System.out.println("请输入第一艘船的载重");
-		c1 = in.nextInt();
-		System.out.println("请输入第二艘船的载重");
-		c2 = in.nextInt();
-		System.out.println("请输入集装箱的重量");
-		w = new int[n];
-		for (int i=0; i<n; i++) {
-			w[i] = in.nextInt();
-		}
+		n = 4;
+		c1 = 10;
+		c2 = 12;
+		int[] w = {5,2,1,3};
 		
 		maxLoading();
 		show();
