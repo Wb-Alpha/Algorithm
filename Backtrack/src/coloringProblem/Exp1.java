@@ -61,7 +61,14 @@ public class Exp1 {
 		
 	}
 	
+	public static void exp1() {
+		n = 6;
+		a = new int[n][n];
+		x = new int[n];
+		
+	}
+	
 	public static void main(String[] args) {
-		init();
+		exp1();
 	}
 }
