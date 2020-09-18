@@ -2,31 +2,37 @@ package Training;
 
 import java.util.*;
 
+
+//https://blog.csdn.net/qq_41714549/article/details/87435089
 public class KºÃÊý {
-	static long result;
+	final int MOD=1000000007;
 	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
-		int k = in.nextInt();
-		int l = in.nextInt();
-		result = 1;
-		judgeK(k, l, l);
-		result %= 1000000007;
-		System.out.println(result);
+		int sum = 0;	
+		
 	}
 	
-	public static void judgeK(int k, int l,int check) {
-		if (l != 0) {
-			if (l == check) {
-				result = result*(k-1);
-				l--;
-				judgeK(k, l, check);
-			}
-			
-			else {
-				result = result + (long)((k-2)*(k-2)) + (long)(2*(k-1));
-				l--;
-				judgeK(k ,l ,check);
+	int countK(int length, int range, int sum) {
+		int[][] dp = new int[1000][1000];
+		for (int i=0; i<range; i++) {
+			dp[0][i]=1;
+		}
+		
+		for (int i=1; i<length; i++) {
+			for (int j=0; j<range; j++) {
+				for (int k=0; k<range; k++) {
+					if ((j-1)==0 && k==0)
+						continue;
+					dp[i][j] = dp[i][j]+dp[i-1][k];
+					dp[i][j] %= MOD;
+				}
 			}
 		}
+		
+		for (int i=0; i<range; i++) {
+			sum += dp[length-1][i];
+			sum %= MOD;
+		}
+		
+		return sum;
 	}
 }
