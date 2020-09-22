@@ -8,13 +8,18 @@ import java.util.Set;
 //请问，总共能排列如多少个不同的单词
 
 public class 单词重排 {
-	public static void main(String[] args) {
-		Set result = new HashSet();
-		String str = "LANQIAO";
-		String[] list = str.split("");
+	String[] data = {"L", "A", "N", "Q", "I", "A", "O"};
+	class Node{
+		private String Data;
+		private Node[] nList = new Node[7];
+		
+		public Node(String[] dList) {
+			
+		}
 	}
 	
-	public static String process(String[] list) {
+	public static void main(String[] args){
 		
 	}
 }
+
