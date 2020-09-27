@@ -1,0 +1,5 @@
+package Á·Ï°ÏµÍ³;
+
+public class ÄæÐò¶Ô {
+
+}
