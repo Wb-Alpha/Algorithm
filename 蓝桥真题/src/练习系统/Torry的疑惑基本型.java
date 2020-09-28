@@ -9,6 +9,7 @@ public class Torry的疑惑基本型 {
 		int num = 1;
 		int result = 2;
 		int temp = 1;
+		in.close();
 		
 		while (num < n) {
 			temp++;
