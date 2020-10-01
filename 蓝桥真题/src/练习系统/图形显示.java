@@ -10,7 +10,7 @@ public class м╪пнотй╬ {
 		for (int i=0; i < n; i++) {
 			int num = n-i;
 			for (int j = 0; j < num; j++) {
-				System.out.print("*");
+				System.out.print("* ");
 			}
 			System.out.println();
 		}
