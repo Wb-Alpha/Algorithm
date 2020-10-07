@@ -13,23 +13,25 @@ public class _08авдЫЪ§ {
 			
 			lst.add(i);
 		}
-		f(lst);
+		f(lst, 0);
 		in.close();
 	}
 	
-	private static void f(ArrayList<Integer> lst) {
+	private static void f(ArrayList<Integer> lst, int id) {
 		System.out.println("size="+lst.size()+"  Step="+lst.get(1));
-		int step = lst.get(1);
-		if (step >= lst.size()) {
+		int step = lst.get(id+1);
+		if (step > lst.size()) {
 			System.out.println(lst.size());
 		}
 		else {
 			ArrayList<Integer> a = new ArrayList<Integer>();
-			for (int i = 0; i < lst.size(); i = i+step) {
-				System.out.println(lst.get(i));
-				a.add(lst.get(i));
+			for (int i = 0; i < lst.size(); i++) {
+				if (i%step != 0) {
+					System.out.println(lst.get(i));
+					a.add(lst.get(i));
+				}	
 			}
-			f(a);
+			f(a, id+1);
 		}
 	}
 }
