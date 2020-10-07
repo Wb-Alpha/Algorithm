@@ -7,17 +7,15 @@ public class 节点选择 {
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
 		int[][] arr = new int[n][2];
+		Node[] nodeList = new Node[n];
 		
 		for (int i = 0; i < n; i++) {
-			arr[i][0] = in.nextInt();
+			int value = in.nextInt();
+			// nodeList[i] = new Node(value); 
 		}
-		for (int i = 0; i < n-1; i++) {
-			for (int j = 0; j < 2; j++) {
-				
-			}
-		}
+		
 	}
-	/*
+
 	class Node{
 		public int value;
 		public Node parent;
@@ -29,5 +27,5 @@ public class 节点选择 {
 		public void setParent(Node parent) {
 			this.parent = parent;
 		}
-	}*/
+	}
 }

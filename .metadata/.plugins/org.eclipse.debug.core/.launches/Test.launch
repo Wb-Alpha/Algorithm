@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/Sort/src/InsertSort/Test.java"/>
+<listEntry value="/蓝桥真题/src/a2013年省赛B组/test.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="InsertSort.Test"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Sort"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="a2013年省赛B组.test"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="蓝桥真题"/>
 </launchConfiguration>
