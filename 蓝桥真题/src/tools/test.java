@@ -5,12 +5,11 @@ import java.util.Vector;
 public class test {
 	 
 	public static void main(String[] args) {
-		Vector v = new Vector();
-		v.add(2);
-		v.add(4);
-		v.add(3);
-		
-		System.out.println(v.lastIndexOf(2));
+		int i = 123;
+		String stri = Integer.toString(i);
+		String strj = "456";
+		int j = Integer.parseInt(strj);
+
 	}
 	
 

@@ -2,7 +2,7 @@ package a2014省赛;
 
 import java.util.Scanner;
 
-public class _09地宫取宝 {
+public class _09地宫取宝_答案 {
 	static int m,n,k;
 	static int[][] arr;
 	static int ans;
@@ -22,30 +22,12 @@ public class _09地宫取宝 {
 			}
 		}
 		
-		in.close();
 		f(0, 0, 0, -1);
 		System.out.println(ans);
 	}
-	
-	public static void f(int x, int y, int num, int max) {
-		if (x == m-1 && y == n-1) {
-			if (num == k)
-				ans++;
-			else if (num == k-1 && max < arr[y][x])
-				ans++;
-			return;
-		}
+
+	private static void f(int i, int j, int l, int o) {
 		
-		if (arr[x][y] > max) {			
-			if (x+1 < n) 
-				f(x+1, y, ++num, arr[x][y]);
-			if (y+1 < m)
-				f(x, y+1, ++num, arr[x][y]);
-		}
 		
-		if (x+1 < n) 
-			f(x+1, y, num, max);
-		if (y+1 < m)
-			f(x, y+1, num, max);
 	}
 }
