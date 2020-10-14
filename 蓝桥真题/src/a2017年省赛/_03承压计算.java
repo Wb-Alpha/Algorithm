@@ -8,7 +8,7 @@ public class _03≥–—πº∆À„ {
 		Scanner in = new Scanner(System.in);
 		a = new int[29][29];
 		for (int i = 0; i < 30; i++) {
-			for (int j = i;)
+			//for (int j = i;)
 		}
 		
 		
